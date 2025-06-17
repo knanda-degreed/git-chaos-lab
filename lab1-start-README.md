@@ -39,7 +39,7 @@ echo "Main A" > file.txt && git add . && git commit -m "Main A"
 git checkout -b feature
 echo "Feature A" >> file.txt && git commit -am "Feature A"
 git checkout main
-git merge feature -m "Merged too early"
+git merge --no-ff feature -m "Merged too early"
 ```
 
 Now pretend your teammate pushes more work to `feature`:
