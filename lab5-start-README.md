@@ -1,6 +1,6 @@
 # 🧭 Lab 5: Git Bisect — Find the Bug!
 
-Use `git bisect` to automatically binary search your history for the commit that introduced a bug.
+In this lab, you'll simulate a long history of changes, then use `git bisect` to pinpoint which commit introduced a regression.
 
 ---
 
@@ -9,52 +9,73 @@ Use `git bisect` to automatically binary search your history for the commit that
 Practice:
 - Using `git bisect`
 - Marking commits as good/bad
-- Automating bug finding
+- Automating bug discovery
 
 ---
 
 ## 🛠️ Setup
 
+This lab assumes you've run:
+
 ```bash
-git checkout lab5-start
+chmod +x setup-lab5-bisect.sh
+./setup-lab5-bisect.sh
 ```
 
-Create a script:
-```bash
-echo "echo 'GOOD'" > script.sh
-chmod +x script.sh
-git add script.sh
-git commit -m "Working version"
-```
+Which creates:
+- 109 dummy commits with a working `script.sh`
+- 1 final commit that breaks it
 
-Break it:
+To verify:
 ```bash
-echo "echo 'BAD'" > script.sh
-git commit -am "Broken version"
+git log --oneline --graph --decorate
+cat script.sh
 ```
 
 ---
 
-## 🔎 Run Bisect
+## 🔍 Run Bisect
+
+Start bisecting from latest:
 
 ```bash
 git bisect start
-git bisect bad
-git bisect good HEAD~1
+git bisect bad HEAD
+git bisect good HEAD~110
 ```
 
-Git walks you through testing each commit. Mark each one:
+Now Git will walk you through history. After each step:
 
 ```bash
 ./script.sh
-git bisect good  # or bad
 ```
 
-When done:
+Then tell Git:
+```bash
+git bisect good
+# or
+git bisect bad
+```
+
+---
+
+## 🤖 Automate with Script
+
+You can run this instead:
+
 ```bash
 git bisect reset
+git bisect start
+git bisect bad
+git bisect good HEAD~110
+git bisect run ./script.sh
 ```
 
 ---
 
 ## ✅ Done!
+
+- Bisect helps you debug across massive commit ranges
+- This works on scripts, tests, or even compiled projects
+
+Rejoice, you now have laser-guided blame.
