@@ -14,11 +14,6 @@ Practice the following:
 
 ## 🧰 Setup
 
-Start by creating a new branch:
-```bash
-git checkout -b lab0-git-flow
-```
-
 Create a file and commit it:
 ```bash
 echo "Hello from Lab 0" > intro.txt
