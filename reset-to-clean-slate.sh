@@ -21,6 +21,7 @@ KNOWN_BRANCHES=(
 BRANCH_TAGS=(
   "main:main-clean"
   "lab0-git-flow:lab0-clean"
+  "lab-dag-playground": "lab-dag-playground-clean"
   "lab1-start:lab1-clean"
   "lab2-start:lab2-clean"
   "lab3-start:lab3-clean"
