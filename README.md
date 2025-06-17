@@ -37,11 +37,9 @@ Whether you're just starting or have yelled at `git reset --hard` one too many t
 | `lab2-start`           | Rebase Gone Rogue – history rewritten, panic ensues |
 | `lab3-start`           | Force Push Wipes Teammate's Work |
 | `lab4-start`           | Squash and Merge Lost Credit |
-| `lab5-start`           | Cherry-Pick Missed Dependency |
-| `lab6-start`           | Merge Conflict in Lock/Project Files |
-| `lab7-start`           | Git Bisect — Binary search your commit history |
-| `lab8-start`           | Git Worktree — Parallel workspaces |
-| `lab9-start`           | Git Rerere — Remember your resolutions |
+| `lab5-start`           | Git Bisect — Binary search your commit history |
+| `lab6-start`           | Git Worktree — Parallel workspaces |
+| `lab7-start`           | Git Rerere — Remember your resolutions |
 
 > 📌 To start a lab:  
 > ```bash
@@ -57,3 +55,28 @@ Whether you're just starting or have yelled at `git reset --hard` one too many t
    ```bash
    git clone https://github.com/YOU/git-chaos-lab.git
    cd git-chaos-lab
+   ```
+3. **Pick a lab branch and follow its README**
+4. **Use GitPod (optional)** for in-browser coding
+
+---
+
+## 🧠 Bonus Topics You’ll See in Action
+
+- DAG: Directed Acyclic Graphs and commit topology
+- `git reflog`: Git’s undo/redo for pros
+- `git cherry-pick`: Copying commits across timelines
+- `git bisect`: Isolate the faulty commit
+- `git rerere`: Let Git remember your conflict resolutions
+- `git worktree`: Manage multiple branches in parallel folders
+
+---
+
+## 👀 Live Demos by Instructor
+
+Some labs like `lab-dag-playground`, `lab4-start`, and `lab5-start` will be demonstrated live.  
+Feel free to explore them after the workshop too!
+
+---
+
+Happy rebasing! 😈
