@@ -29,9 +29,9 @@ echo "D" >> file.txt && git commit -am "D"
 echo "E" >> file.txt && git commit -am "E"
 ```
 
-Switch back to main:
+Switch back to lab-dag-playground:
 ```bash
-git checkout main
+git checkout lab-dag-playground
 echo "F" >> file.txt && git commit -am "F"
 ```
 
@@ -51,7 +51,7 @@ Rebase another branch:
 git checkout -b rebased-feature <SHA-of-C>
 echo "R1" >> file.txt && git commit -am "R1"
 echo "R2" >> file.txt && git commit -am "R2"
-git rebase main
+git rebase lab-dag-playground
 ```
 
 ---
@@ -67,7 +67,7 @@ git log --oneline --graph --all --decorate
 ## 🍒 Cherry-pick
 
 ```bash
-git checkout main
+git checkout lab-dag-playground
 git cherry-pick <SHA-of-R2>
 ```
 
