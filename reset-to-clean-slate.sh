@@ -5,6 +5,16 @@ echo "🧼 Resetting all lab branches to their clean start commits..."
 TEMP_BRANCH=_temp-clean-reset
 BRANCH_TAGS=(
   "main:main-clean"
+  "lab0-git-flow:lab0-clean"
+  "lab1-start:lab1-clean"
+  "lab2-start:lab2-clean"
+  "lab3-start:lab3-clean"
+  "lab4-start:lab4-clean"
+  "lab5-start:lab5-clean"
+  "lab6-start:lab6-clean"
+  "lab7-start:lab7-clean"
+  "lab8-start:lab8-clean" 
+  "lab9-start:lab9-clean"
 )
 
 # Fetch tags and latest info from origin
