@@ -1,1 +1,1 @@
-echo 'GOOD'
+echo 'BAD'
